@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Academic Success: Hardwork or Destiny?</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
     body {
-      font-family: sans-serif;
+      font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
       background: linear-gradient(to right, #f8f9fa, #e0e0e0);
@@ -28,12 +30,24 @@
       font-style: italic;
       color: #555;
     }
+    h2 {
+      color: #2e3a59;
+      border-bottom: 2px solid #dcdcdc;
+      padding-bottom: 6px;
+    }
     p, .section {
       max-width: 800px;
       font-size: 1.1rem;
       line-height: 1.6;
       margin-top: 30px;
       padding: 0 20px;
+    }
+    .section {
+      background: white;
+      padding: 30px;
+      margin: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
     }
     img {
       margin-top: 20px;
@@ -47,9 +61,11 @@
 </head>
 <body>
   <h1><em>Academic Success: Hardwork or Destiny?</em></h1>
-  <p>
-    This project explores the complex and often overlooked balance between individual effort and uncontrollable background factors in shaping academic success. By analyzing a dataset of over 6,600 student records—including behavioral, demographic, and environmental variables—we aim to answer two key questions: How much of a student’s performance can be attributed to their own actions? And how much is shaped by factors beyond their control? Through both exploratory analysis and predictive modeling, we reveal the weight each variable carries and provide actionable insights for educators and students.
-  </p>
+  <div class="section">
+    <p>
+      This project explores the complex and often overlooked balance between individual effort and uncontrollable background factors in shaping academic success. By analyzing a dataset of over 6,600 student records—including behavioral, demographic, and environmental variables—we aim to answer two key questions: How much of a student’s performance can be attributed to their own actions? And how much is shaped by factors beyond their control? Through both exploratory analysis and predictive modeling, we reveal the weight each variable carries and provide actionable insights for educators and students.
+    </p>
+  </div>
 
   <div class="section">
     <h2>Correlation Heatmap</h2>
@@ -72,7 +88,7 @@
       While attendance and study time clearly play a major role, the chart shows that when these two are excluded, uncontrollable features—such as access to resources and stronger correlations with exam scores than many other controllable variables.
     </p>
     <p>
-      This highlights how environmental background can rival the influence of habits and behaviors students can directly control. As surprisingly as it is, parental involvement showed a negative correlation, indicating families can do more harm then good when acting unconsciously to support their children.
+      This highlights how environmental background can rival the influence of habits and behaviors students can directly control. As surprisingly as it is, parental involvement showed a negative correlation, indicating families can do more harm than good when acting unconsciously to support their children.
     </p>
   </div>
 
@@ -85,10 +101,8 @@
     <p>
       We trained a LightGBM model using all available features.
     </p>
-    <p>
-      <strong>RMSE:</strong> 1.03<br />
-      <strong>R² Score:</strong> 0.89
-    </p>
+    <p><strong>RMSE:</strong> 1.03<br />
+    <strong>R² Score:</strong> 0.89</p>
     <p>
       This model delivers highly accurate predictions by combining behavioral patterns with environmental context. The strong R² score suggests that most of the variance in exam scores can be explained using the available data—highlighting the power of a well-rounded understanding of both effort and environment.
     </p>
@@ -100,7 +114,7 @@
       While predictions were made using LightGBM for its high accuracy, the following feature interpretations are based on coefficients from a Ridge Regression model trained on standardized data. This approach allows for clearer understanding of each variable’s individual contribution.
     </p>
     <p>
-      The most influential features were Attendance (+2.29) and Study Time(+1.71), which had the strongest positive impact on exam performance. These were followed by Previous Scores (+0.69), Access to Resources (+0.68), and Tutoring Sessions (+0.50), all of which reflect consistent academic preparation and support.
+      The most influential features were Attendance (+2.29) and Study Time (+1.71), which had the strongest positive impact on exam performance. These were followed by Previous Scores (+0.69), Access to Resources (+0.68), and Tutoring Sessions (+0.50), all of which reflect consistent academic preparation and support.
     </p>
     <p>
       Moderate contributors include Peer Influence, Parental Education Level, Family Income, and Motivation Level all showing meaningful but less dominant positive effects. Interestingly, Parental_Involvement had a negative weight, possibly reflecting reactive support in struggling situations.
@@ -116,10 +130,8 @@
       To better understand how much of a student’s success can be explained without behavioral data, we trained a separate model using only uncontrollable, environmental variables—such as family income, parental education, peer influence, and learning disabilities.
     </p>
     <img src="images/eda/lgbm_regression_model2.png" alt="Environmental-Only Model LightGBM" />
-    <p>
-      <strong>RMSE:</strong> 1.03<br />
-      <strong>R² Score:</strong> 0.89
-    </p>
+    <p><strong>RMSE:</strong> 1.03<br />
+    <strong>R² Score:</strong> 0.89</p>
     <p>
       Surprisingly, the model’s predictive power remains just as strong. Even without attendance or study time, background conditions alone can account for nearly 89% of the variance in student performance. This finding reinforces how powerful—and often overlooked—environmental and demographic factors are when it comes to academic outcomes.
     </p>
@@ -130,36 +142,22 @@
     <p>
       As with the previous model, predictions here were made using LightGBM, while the feature importance interpretation is based on coefficients from Ridge Regression. This maintains consistency in interpretability across both models.
     </p>
-    <p>
-      <strong>Access to Resources (+0.187)</strong>: Students with better access to learning resources perform significantly better, confirming the strong role of infrastructure and opportunity.
-    </p>
-    <p>
-      <strong>Parental Education Level (+0.128)</strong>: Higher parental education is associated with slightly better performance, likely due to stronger academic support environments.
-    </p>
-    <p>
-      <strong>Peer Influence (+0.123)</strong>: Students surrounded by academically driven peers tend to stay more engaged and motivated.
-    </p>
-    <p>
-      <strong>Distance from Home (+0.099)</strong> and <strong>Family Income (+0.096)</strong> also show modest positive correlations with performance, likely linked to time efficiency and access to resources.
-    </p>
-    <p>
-      <strong>Internet Access (+0.069)</strong>: While not a major factor, digital access still plays a supportive role.
-    </p>
-    <p>
-      <strong>Parental Involvement (−0.091)</strong> and <strong>Learning Disabilities (−0.109)</strong> both show negative associations. The former may reflect reactive engagement from parents, while the latter highlights well-documented academic challenges.
-    </p>
-    <p>
-      Other features like Gender and School Type showed negligible correlation in this model.
-    </p>
+    <p><strong>Access to Resources (+0.187)</strong>: Students with better access to learning resources perform significantly better, confirming the strong role of infrastructure and opportunity.</p>
+    <p><strong>Parental Education Level (+0.128)</strong>: Higher parental education is associated with slightly better performance, likely due to stronger academic support environments.</p>
+    <p><strong>Peer Influence (+0.123)</strong>: Students surrounded by academically driven peers tend to stay more engaged and motivated.</p>
+    <p><strong>Distance from Home (+0.099)</strong> and <strong>Family Income (+0.096)</strong> also show modest positive correlations with performance, likely linked to time efficiency and access to resources.</p>
+    <p><strong>Internet Access (+0.069)</strong>: While not a major factor, digital access still plays a supportive role.</p>
+    <p><strong>Parental Involvement (−0.091)</strong> and <strong>Learning Disabilities (−0.109)</strong> both show negative associations. The former may reflect reactive engagement from parents, while the latter highlights well-documented academic challenges.</p>
+    <p>Other features like Gender and School Type showed negligible correlation in this model.</p>
   </div>
 
   <div class="section">
     <h2>Conclusion</h2>
     <p>
-      As an answer to the question on the title, we can say: Neither alone, but both together bring academic success. As expected, attendance and study time are the most important factors for academic success, but you also need some support from environmental factors to be fully successful.
+      While both hard work and environmental background matter, our results show that <strong>individual effort—particularly attendance and study time—has the strongest influence</strong> on academic success. That said, when stripped of these controllable variables, uncontrollable factors like family background, access to resources, and learning disabilities alone still explained nearly the same amount of variation (R² = 0.89). This suggests that the two forces are not mutually exclusive; success is best understood as a <strong>combination of both</strong>.
     </p>
     <p>
-      These results provide a clear framework for prioritizing interventions aimed at improving academic outcomes.
+      Predictive models reinforce the importance of attendance, study time, and resource access in student performance. These results provide a clear framework for prioritizing interventions aimed at improving academic outcomes.
     </p>
   </div>
 
