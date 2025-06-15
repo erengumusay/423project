@@ -6,7 +6,7 @@ This project aims to identify and quantify the factors that influence a student'
 - Understand which features matter most in general,
 - See how uncontrollable factors (e.g. parental education, access to resources) affect student performance in specific.
 - Build a predictive model for general prediction and another model just focused on environmental factors.
-- Ultimately, help educators to take early actions for students at risk and give students an idea about what to focus on to improve their academic success.
+- Ultimately, answering is academic success is only hardwork or also destiny, and help educators to take early actions for students at risk and give students an idea about what to focus on to improve their academic success.
 
 
 ---
@@ -75,8 +75,9 @@ This model achieves very high predictive performance by incorporating both envir
 > The model's predictions align closely with the real data, indicating strong fit.
 ---
 # Interpretation of Features 
-This analysis presents Ridge Regression results using a dataset where outliers in numerical features have been removed.
-All features were standardized prior to training to ensure the comparability of coefficient magnitudes.
+This analysis presents moodel results.
+All features were standardized and outliers are removed prior to training to ensure the comparability of coefficient magnitudes.
+
 ---
 
 ### 🔝 Top Influential Features
@@ -268,3 +269,4 @@ Be open about pressure, expectations, and how they can support you without press
 - Python, pandas, scikit-learn, lightgbm, matplotlib, seaborn
 - Jupyter Notebooks
 - Ridge Regression, LightGBM, ANOVA, correlation analysis
+
