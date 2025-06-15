@@ -83,7 +83,7 @@
     </p>
     <img src="images/eda/lgbm_regression_fit.png" alt="Full Feature LightGBM Model Performance" />
     <p>
-      We trained a LightGBM model using all available features, including behavioral variables such as attendance and hours studied.
+      We trained a LightGBM model using all available features.
     </p>
     <p>
       <strong>RMSE:</strong> 1.03<br />
@@ -91,6 +91,21 @@
     </p>
     <p>
       This model delivers highly accurate predictions by combining behavioral patterns with environmental context. The strong R² score suggests that most of the variance in exam scores can be explained using the available data—highlighting the power of a well-rounded understanding of both effort and environment.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Environmental-Only Model</h2>
+    <p>
+      To better understand how much of a student’s success can be explained without behavioral data, we trained a separate model using only uncontrollable, environmental variables—such as family income, parental education, peer influence, and learning disabilities.
+    </p>
+    <img src="images/eda/lgbm_regression_model2.png" alt="Environmental-Only Model LightGBM" />
+    <p>
+      <strong>RMSE:</strong> 1.03<br />
+      <strong>R² Score:</strong> 0.89
+    </p>
+    <p>
+      Surprisingly, the model’s predictive power remains just as strong. Even without attendance or study time, background conditions alone can account for nearly 89% of the variance in student performance. This finding reinforces how powerful—and often overlooked—environmental and demographic factors are when it comes to academic outcomes.
     </p>
   </div>
 </body>
