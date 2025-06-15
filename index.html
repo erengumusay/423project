@@ -97,7 +97,7 @@
   <div class="section">
     <h2>Interpretation of Features</h2>
     <p>
-      The feature importance analysis below is based on the model results. Outliers in numerical features were removed and all values were standardized prior to training.
+      While predictions were made using LightGBM for its high accuracy, the following feature interpretations are based on coefficients from a Ridge Regression model trained on standardized data. This approach allows for clearer understanding of each variable’s individual contribution.
     </p>
     <p>
       The most influential features were Attendance (+2.29) and Study Time(+1.71), which had the strongest positive impact on exam performance. These were followed by Previous Scores (+0.69), Access to Resources (+0.68), and Tutoring Sessions (+0.50), all of which reflect consistent academic preparation and support.
@@ -128,7 +128,7 @@
   <div class="section">
     <h2>Interpretation of Features (Uncontrollable Features)</h2>
     <p>
-      This section highlights how each uncontrollable feature contributes to the prediction of student success in the environmental-only model.
+      As with the previous model, predictions here were made using LightGBM, while the feature importance interpretation is based on coefficients from Ridge Regression. This maintains consistency in interpretability across both models.
     </p>
     <p>
       <strong>Access to Resources (+0.187)</strong>: Students with better access to learning resources perform significantly better, confirming the strong role of infrastructure and opportunity.
