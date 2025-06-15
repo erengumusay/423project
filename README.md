@@ -251,7 +251,7 @@ Based on the predictive model and feature effect analysis, the following recomme
 
 ##  For Students 
 - **Show up — consistently**:
-Regular attendance doesn’t just help with content—it keeps you connected to routines and support systems.
+Attending classes is not only important for the content, but also for maintaining a student mindset. And remember, although they might sound similar, attendance and attention are not the same.
 - **Study smart, not endlessly**:
 Instead of just increasing hours, focus on quality: active recall, focused blocks, and regular review matter most.
 - **Don’t be defined by your past scores**:
