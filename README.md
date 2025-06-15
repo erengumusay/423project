@@ -6,7 +6,7 @@ This project aims to identify and quantify the factors that influence a student'
 - Understand which features matter most in general,
 - See how uncontrollable factors (e.g. parental education, access to resources) affect student performance in specific.
 - Build a predictive model for general prediction and another model just focused on environmental factors.
-
+- Ultimately, help educators to take early actions for students at risk and give students an idea about what to focus on to improve their academic success.
 
 
 ---
@@ -224,7 +224,7 @@ It is visible that environmental factors only are providing a strong prediction 
 
 These results provide a clear framework for prioritizing interventions aimed at improving academic outcomes.
 
-###  Data-Driven Recommendations for Early Support
+###  Data-Driven Recommendations for Educators
 
 Based on the predictive model and feature effect analysis, the following recommendations are proposed to help teachers proactively identify and support students at risk of academic struggle:
 
@@ -249,6 +249,20 @@ Based on the predictive model and feature effect analysis, the following recomme
 - **Raise awareness on parental involvement**:  
   Parental involvement shows a negative correlation, indicating that some parents may be stressing out students even more.
 
+##  For Students 
+- **Show up — consistently**:
+Regular attendance doesn’t just help with content—it keeps you connected to routines and support systems.
+- **Study smart, not endlessly**:
+Instead of just increasing hours, focus on quality: active recall, focused blocks, and regular review matter most.
+- **Don’t be defined by your past scores**:
+Your improvement trajectory is what counts. Use feedback to adjust, not to label yourself.
+- **Ask for help early**:
+Especially if you are lacking resources, share it with people who can help you.
+- **Choose your study environment and friends wisely**:
+Spend time around people who encourage your goals. Peer effect matters more than you think.
+
+- **Talk to your parents about what helps and what doesn’t**:
+Be open about pressure, expectations, and how they can support you without pressuring you more.
 
 ##  Technologies Used
 
