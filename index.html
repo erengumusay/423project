@@ -95,6 +95,22 @@
   </div>
 
   <div class="section">
+    <h2>Interpretation of Features</h2>
+    <p>
+      The feature importance analysis below is based on Ridge Regression results. Outliers in numerical features were removed and all values were standardized prior to training.
+    </p>
+    <p>
+      The most influential features were Attendance (+2.29) and Hours_Studied (+1.71), which had the strongest positive impact on exam performance. These were followed by Previous_Scores (+0.69), Access_to_Resources (+0.68), and Tutoring_Sessions (+0.50), all of which reflect consistent academic preparation and support.
+    </p>
+    <p>
+      Moderate contributors include Peer_Influence, Parental_Education_Level, Family_Income, and Motivation_Level—all showing meaningful but less dominant positive effects. Interestingly, Parental_Involvement had a negative weight, possibly reflecting reactive support in struggling situations.
+    </p>
+    <p>
+      Other features such as Physical_Activity, Internet_Access, and Distance_from_Home showed smaller positive effects. Features like Teacher_Quality, Gender, Sleep_Hours, and School_Type showed negligible influence on performance in this model.
+    </p>
+  </div>
+
+  <div class="section">
     <h2>Environmental-Only Model</h2>
     <p>
       To better understand how much of a student’s success can be explained without behavioral data, we trained a separate model using only uncontrollable, environmental variables—such as family income, parental education, peer influence, and learning disabilities.
