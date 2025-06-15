@@ -50,11 +50,20 @@
   <p>
     This project explores the complex and often overlooked balance between individual effort and uncontrollable background factors in shaping academic success. By analyzing a dataset of over 6,600 student records—including behavioral, demographic, and environmental variables—we aim to answer two key questions: How much of a student’s performance can be attributed to their own actions? And how much is shaped by factors beyond their control? Through both exploratory analysis and predictive modeling, we reveal the weight each variable carries and provide actionable insights for educators and students.
   </p>
+
   <div class="section">
     <h2>Correlation Heatmap</h2>
     <img src="images/eda/correlation_heatmap.png" alt="Correlation Heatmap" />
     <p>
-      This heatmap illustrates the correlation between all features in the dataset, helping us identify the strength and direction of relationships among variables. It's especially useful in detecting multicollinearity and highlighting the most influential predictors.
+      This heatmap illustrates the correlation between all features in the dataset, helping us identify the strength and direction of relationships among variables. It's visible that attendance and study time are most dominant factors affecting exam grade, followed by previous score and access to resources.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Controllable vs. Uncontrollable Factors</h2>
+    <img src="images/eda/controllable_vs_uncontrollable.png" alt="Controllable vs Uncontrollable Feature Correlation" />
+    <p>
+      The bar chart visualizes the correlation of controllable features (like study habits) versus uncontrollable features (like family background). Red bars indicate uncontrollable features, while blue bars indicate controllable features. Interestingly, parental involvement comes out to be very interesting with the negative correlation it has.
     </p>
   </div>
 </body>
