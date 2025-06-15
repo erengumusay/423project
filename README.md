@@ -75,9 +75,8 @@ This model achieves very high predictive performance by incorporating both envir
 > The model's predictions align closely with the real data, indicating strong fit.
 ---
 # Interpretation of Features 
-This analysis presents Ridge Regression results using a dataset where outliers in numerical features have been removed.  
+This analysis presents Ridge Regression results using a dataset where outliers in numerical features have been removed.
 All features were standardized prior to training to ensure the comparability of coefficient magnitudes.
-
 ---
 
 ### 🔝 Top Influential Features
