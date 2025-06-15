@@ -11,30 +11,29 @@
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to right, #f8f9fa, #e0e0e0);
+      background: linear-gradient(to right, #f1f4f9, #dbe2ec);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
       min-height: 100vh;
       text-align: center;
-      padding-top: 50px;
     }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      max-width: 700px;
-      margin: 0 20px;
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 500px;
+      object-fit: cover;
     }
-    h1 em {
-      font-style: italic;
-      color: #555;
-    }
+
     h2 {
       color: #2e3a59;
       border-bottom: 2px solid #dcdcdc;
       padding-bottom: 6px;
     }
+
     p, .section {
       max-width: 800px;
       font-size: 1.1rem;
@@ -42,6 +41,7 @@
       margin-top: 30px;
       padding: 0 20px;
     }
+
     .section {
       background: white;
       padding: 30px;
@@ -49,6 +49,7 @@
       border-radius: 16px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
     }
+
     img {
       margin-top: 20px;
       max-width: 90%;
@@ -60,7 +61,10 @@
   </style>
 </head>
 <body>
-  <h1><em>Academic Success: Hardwork or Destiny?</em></h1>
+  <div class="hero-image">
+    <img src="images/eda/header.png" alt="Academic Success Visual" />
+  </div>
+
   <div class="section">
     <p>
       This project explores the complex and often overlooked balance between individual effort and uncontrollable background factors in shaping academic success. By analyzing a dataset of over 6,600 student records—including behavioral, demographic, and environmental variables—we aim to answer two key questions: How much of a student’s performance can be attributed to their own actions? And how much is shaped by factors beyond their control? Through both exploratory analysis and predictive modeling, we reveal the weight each variable carries and provide actionable insights for educators and students.
