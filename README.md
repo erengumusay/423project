@@ -51,7 +51,7 @@ We examined distributions, missing values, and feature interactions to identify 
 ![Correlation Heatmap](images/eda/correlation_heatmap.png)
 > The heatmap confirms shows all features correlation with each other.
 
-### Correlation Heatmap-Bar Chart- Controllable vs Uncontrollable Features
+### Correlation Bar Chart- Controllable vs Uncontrollable Features
 ![controllable_vs_uncontrollabe_analyses.png](images/eda/controllable_vs_uncontrollabe_analyses.png)---
 > The bar chart visualizes the correlation of controllable features (like study habits) versus uncontrollable features (like family background).
 > Red bars indicate uncontrollable features, while blue bars indicate controllable features.
