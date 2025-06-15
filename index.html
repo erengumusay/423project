@@ -11,10 +11,12 @@
       padding: 0;
       background: linear-gradient(to right, #f8f9fa, #e0e0e0);
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
+      justify-content: flex-start;
+      min-height: 100vh;
       text-align: center;
+      padding-top: 50px;
     }
     h1 {
       font-size: 2.5rem;
@@ -26,9 +28,19 @@
       font-style: italic;
       color: #555;
     }
+    p {
+      max-width: 800px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-top: 30px;
+      padding: 0 20px;
+    }
   </style>
 </head>
 <body>
   <h1><em>Academic Success: Hardwork or Destiny?</em></h1>
+  <p>
+    This project explores the complex and often overlooked balance between individual effort and uncontrollable background factors in shaping academic success. By analyzing a dataset of over 6,600 student records—including behavioral, demographic, and environmental variables—we aim to answer two key questions: How much of a student’s performance can be attributed to their own actions? And how much is shaped by factors beyond their control? Through both exploratory analysis and predictive modeling, we reveal the weight each variable carries and provide actionable insights for educators and students alike.
+  </p>
 </body>
 </html>
